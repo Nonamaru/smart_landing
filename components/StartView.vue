@@ -337,7 +337,7 @@ export default{
     width: 100vw;
     display: flex;
     flex-direction: column;
-    user-select: none;
+    /* user-select: none; */
     position: relative;
 }
 #start .background-img{
