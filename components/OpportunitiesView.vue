@@ -102,7 +102,7 @@ export default{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    user-select: none; 
+    /* user-select: none;  */
     margin-top: 5vh;
 }
 #op{
@@ -172,7 +172,7 @@ export default{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    user-select: none; 
+    /* user-select: none;  */
 }
 #title{
     font-family: 'Cera Round Pro';

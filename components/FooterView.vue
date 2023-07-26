@@ -68,7 +68,7 @@ export default{
     width: 100vw;
     background-color: #C51F5F;
     color: white;
-    user-select: none; 
+    /* user-select: none;  */
     display: flex;
     flex-direction: column;
 }
@@ -151,7 +151,7 @@ export default{
     width: 100vw;
     background-color: #C51F5F;
     color: white;
-    user-select: none; 
+    /* user-select: none;  */
 }
 .container{
     /* width: 85vw; */

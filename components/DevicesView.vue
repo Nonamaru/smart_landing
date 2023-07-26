@@ -458,7 +458,7 @@ export default{
     display: flex;
     flex-direction: column;
     text-align: center;
-    user-select: none;
+    /* user-select: none; */
     position: relative;
 }
 #title{

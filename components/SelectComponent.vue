@@ -153,7 +153,7 @@ export default{
 .cont{
     width: 90%;
     position: relative;
-    user-select: none;
+    /* user-select: none; */
 }
 .select{
     position: relative;

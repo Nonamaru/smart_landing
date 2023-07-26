@@ -651,7 +651,7 @@ export default{
     background: #C51F5F;
     box-shadow: 0px 0px 16px rgba(197, 31, 95, 0.16), 0px 0px 8px rgba(0, 0, 0, 0.12);
     border-radius: 16px;
-    margin-bottom: 18.61vw;
+    /* margin-bottom: 18.61vw; */
 }
 .submit text{
     font-family: 'Cera Round Pro';
@@ -931,7 +931,7 @@ export default{
     margin-right: auto;
     /* width: 85vw; */
     width: 83.33vw;
-    user-select: none;
+    /* user-select: none; */
     margin-bottom: 4.44vw;
 }
 .title{

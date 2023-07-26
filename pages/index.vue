@@ -6,6 +6,7 @@
     <DevicesView />
     <SliderView />
     <KitView />
+    <QuestionsView />
     <FooterView />
 </div>
 </template>

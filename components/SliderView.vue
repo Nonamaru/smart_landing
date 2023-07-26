@@ -245,7 +245,7 @@ export default{
     margin-right: auto;
     /* width: 85vw; */
     width: 83.33vw;
-    user-select: none; 
+    /* user-select: none;  */
 }
 .title{
     text-align: center;
