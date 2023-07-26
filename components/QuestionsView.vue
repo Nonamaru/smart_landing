@@ -32,7 +32,7 @@
 <div class="mobile">
     <div class="container">
         <text class="title">Остались вопросы?</text>
-        <text class="description">Оставьте свои контактные данные и наши специалисты свяжутся с вами</text>
+        <text class="description">Задайте определенные условия и предпочтения для создания уютной обстановки вашего дома.</text>
         <div class="inputs">
             <div class="name">
                 <text class="text-name">Как вас зовут?</text>
@@ -95,13 +95,17 @@ export default{
 /*WEB*/
 @media all and (min-width: 900px){
 .web{
-    width: 83.33vw;
+    /* width: 83.33vw; */
+    width: 100vw;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 4.44vw;
+    padding-bottom: 4.44vw;
+    padding-top: 4.44vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #F2F6F8;
+    /* background-color: black; */
 }
 .container{
     display: flex;
@@ -240,18 +244,24 @@ input:focus{
 /*MOBILE*/
 @media all and (max-width: 900px){
 .mobile{
-    width: 90vw;
+    width: 100vw;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
     user-select: none;
     margin-top: 5vh;
-    margin-bottom: 18.61vw;
+    /* margin-bottom: 18.61vw; */
+    background-color: #F2F6F8;
+    padding-top: 8.89vw; 
+    padding-bottom: 17.78vw;
 }
 .container{
     display: flex;
     flex-direction: column;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -307,10 +317,18 @@ input:focus{
 }
 input{
     display: flex;
-    padding: 3.33vw 4.44vw; 
+    padding: 0px 4.44vw; 
     border-radius: 3.33vw;
     border: 1px solid #8B969D;
-    background: #FFF; 
+    background: #FFF;
+
+    font-family: 'Cera Round Pro';
+    font-size: 4.44vw;
+    font-style: normal;
+    font-weight: 400; 
+
+    /* height: 14.44vw; */
+    height: 13.33vw;
 }
 input:focus{
     border: 1px solid #C51F5F;
@@ -324,29 +342,31 @@ input:focus{
 }
 .checkbox{
     border: 2px solid #172D3B;
-    width: 5vw;
-    height: 5vw;
-    margin-right: 1.11vw;
+    width: 4vw;
+    height: 4vw;
+    margin-right: 1.39vw;
     border-radius: 1.67vw;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
-.checkbox-icon{font-size: 5vw;}
+.checkbox-icon{font-size: 4vw;}
 .personal-information text{
     color: #172D3B;
     font-family: 'Cera Round Pro';
     font-size: 3.89vw;
     font-style: normal;
     font-weight: 400; 
+    align-items: center;
 }
 .personal-information text a{
     color: #0099C8;
     font-family: 'Cera Round Pro';
     font-size: 3.89vw;
     font-style: normal;
-    font-weight: 400; 
+    font-weight: 400;
+    text-decoration: none;
 }
 
 .button{
