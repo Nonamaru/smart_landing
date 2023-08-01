@@ -93,9 +93,9 @@
         <Icon class="done-icon" icon="mdi:check-decagram" />
         <text class="done-title">Заявка отправлена</text>
         <text class="done-desc">Мы свяжемся с вами в ближайшее время!</text>
-        <div class="done-button" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false">Вернуться на сайт</div>
+        <div class="done-button" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false; $router.push('/')">Вернуться на сайт</div>
     </div>
-    <div @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false" class="feedback-popup-shadow" v-if="isFeedbackPopup"></div>
+    <div @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; $router.push('/')" class="feedback-popup-shadow" v-if="isFeedbackPopup"></div>
 </section>
 
 
@@ -189,15 +189,15 @@
                     <a href="https://k-telecom.org/politika-konfidentsialnosti/">персональных данных</a>
                 </div>
             </div>
-            <input class="button" type="submit" value="Оставить заявку" @click="sendForm(feedbackForm.tarif, feedbackForm.telephone, feedbackForm.name, feedbackForm.city, feedbackForm.comment, feedbackForm.checked)" />
+            <input class="button" type="submit" value="Оставить заявку" @click="sendForm(feedbackForm.tarif, feedbackForm.telephone, feedbackForm.name, feedbackForm.city, feedbackForm.comment, feedbackForm.checked);" />
         </div>
     </div>
     <div class="done-feedback-popup" v-if="isFeedbackPopup && sendingDone">
-        <Icon class="done-close-icon" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false" icon="material-symbols:close" />
+        <Icon class="done-close-icon" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false; $router.push('/')" icon="material-symbols:close" />
         <Icon class="done-icon" icon="mdi:check-decagram" />
         <text class="done-title">Заявка отправлена</text>
         <text class="done-desc">Мы свяжемся с вами в ближайшее время!</text>
-        <div class="done-button" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false">Вернуться на сайт</div>
+        <div class="done-button" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false; $router.push('/')">Вернуться на сайт</div>
     </div>
 </section>
 </template>
@@ -442,6 +442,7 @@ export default{
         },
         async requestSending() {
             const response = await axios.post("https://smart.k-telecom.org/send/send.php", this.feedbackForm);
+            this.$router.push('#success')
             this.result = response.data;
             this.feedbackForm.telephone = '';
             this.feedbackForm.name = '';
