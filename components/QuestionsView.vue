@@ -60,6 +60,7 @@
 <script>
 import axios from 'axios';
 import { Icon } from '@iconify/vue';
+// import YandexMetrika from 'components/YandexMetrika.vue'
 export default{
     components: {
         Icon,
@@ -83,17 +84,10 @@ export default{
                     this.questions.number = '';
                     // this.questions.assent = false;
                     this.errors = false;
-                    this.sendYandexMetrikaEvent('submit_form');
                 });
             } else {
                 this.errors = true;
             }
-            console.log('send is send')
-        },
-        sendYandexMetrikaEvent(eventName) {
-            ym(94075822, 'reachGoal', `${eventName}`); 
-            console.log('metrika is metriks');
-            return true;
         },
     }
 }
