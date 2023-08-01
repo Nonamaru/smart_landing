@@ -51,7 +51,7 @@
             </div>
             <text>Я даю согласие на обработку <br /><a href="https://k-telecom.org/politika-konfidentsialnosti/">персональных данных</a></text>
         </div>
-        <div class="button" @click="sendQuestions()">
+        <div class="button" @click="sendQuestions();">
             <text>Получить консультацию</text>
         </div>
     </div>
@@ -81,13 +81,20 @@ export default{
                     // this.result = response.data;
                     this.questions.name = '';
                     this.questions.number = '';
-                    this.questions.assent = false;
+                    // this.questions.assent = false;
                     this.errors = false;
+                    this.sendYandexMetrikaEvent('submit_form');
                 });
             } else {
                 this.errors = true;
             }
-        }
+            console.log('send is send')
+        },
+        sendYandexMetrikaEvent(eventName) {
+            ym(94075822, 'reachGoal', `${eventName}`); 
+            console.log('metrika is metriks');
+            return true;
+        },
     }
 }
 </script>
