@@ -102,7 +102,7 @@ export default{
     },
     mounted() {
         window.addEventListener('scroll', this.handleScroll);
-        this.$router.push('/');
+        // this.$router.push('/');
     },
     beforeUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
