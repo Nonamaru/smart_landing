@@ -139,7 +139,7 @@ export default{
     align-items: center;
     cursor: pointer;
 }
-.logo img{width: 100%;}
+.logo img{width: 100%; height: 100%;}
 .pre-header-burger-icon{
     position: relative;
     display: flex;

@@ -394,14 +394,14 @@ export default{
                 this.errorCheck = true;
                 if (phone == '' || phone.length != 15) {
                     this.errorPhone = true;
-                    if (name = ''){
+                    if (name == ''){
                         this.errorName = true;
                     } else {
                         this.errorName = false;
                     }
                 } else {
                     this.errorPhone = false;
-                    if (name = ''){
+                    if (name == ''){
                         this.errorName = true;
                     } else {
                         this.errorName = false;
@@ -415,7 +415,7 @@ export default{
                 // this.feedbackForm.telephone = '',
                 // this.feedbackForm.name = '',
                 // this.feedbackForm.comment = '',
-                this.feedbackForm.checked = false,
+                // this.feedbackForm.checked = false,
                 console.log(tarif, phone, name, city, comment);
                 this.requestSending();
             }
@@ -442,7 +442,9 @@ export default{
         },
         async requestSending() {
             const response = await axios.post("https://smart.k-telecom.org/send/send.php", this.feedbackForm);
-            this.$router.push('#success')
+            this.$router.push('#success');
+            ym(94075822,'reachGoal','sendform');
+            ym(94075822,'reachGoal','success');
             this.result = response.data;
             this.feedbackForm.telephone = '';
             this.feedbackForm.name = '';
