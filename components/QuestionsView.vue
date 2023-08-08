@@ -82,6 +82,7 @@ export default{
                     // this.result = response.data;
                     this.questions.name = '';
                     this.questions.number = '';
+                    ym(94075822,'reachGoal','SmartSend');
                     // this.questions.assent = false;
                     this.errors = false;
                 });
