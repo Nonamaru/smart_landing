@@ -93,9 +93,9 @@
         <Icon class="done-icon" icon="mdi:check-decagram" />
         <text class="done-title">Заявка отправлена</text>
         <text class="done-desc">Мы свяжемся с вами в ближайшее время!</text>
-        <div class="done-button" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false; $router.push('/')">Вернуться на сайт</div>
+        <div class="done-button" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false; this.emit('kitScroll', 'start')">Вернуться на сайт</div>
     </div>
-    <div @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; $router.push('/')" class="feedback-popup-shadow" v-if="isFeedbackPopup"></div>
+    <div @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; this.emit('kitScroll', 'start')" class="feedback-popup-shadow" v-if="isFeedbackPopup"></div>
 </section>
 
 
@@ -193,11 +193,11 @@
         </div>
     </div>
     <div class="done-feedback-popup" v-if="isFeedbackPopup && sendingDone">
-        <Icon class="done-close-icon" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false; $router.push('/')" icon="material-symbols:close" />
+        <Icon class="done-close-icon" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false; this.$emit('kitScroll', 'start')" icon="material-symbols:close" />
         <Icon class="done-icon" icon="mdi:check-decagram" />
         <text class="done-title">Заявка отправлена</text>
         <text class="done-desc">Мы свяжемся с вами в ближайшее время!</text>
-        <div class="done-button" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false; $router.push('/')">Вернуться на сайт</div>
+        <div class="done-button" @click="isFeedbackPopup = !isFeedbackPopup; errorName=false; errorPhone=false; errorCheck=false; sendingDone=false; this.$emit('kitScroll', 'start')">Вернуться на сайт</div>
     </div>
 </section>
 </template>

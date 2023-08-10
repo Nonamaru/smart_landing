@@ -8,13 +8,18 @@
 </div>
 <div id="desktop">
     <YandexMetrika />
-    <StartView />
+    <div ref="start"></div>
+    <StartView @scroll="(i) => scroll(i)" />
+    <div ref="opportunities"></div>
     <OpportunitiesView />
+    <div ref="devices"></div>
     <DevicesView />
+    <div ref="slider"></div>
     <SliderView />
+    <div ref="kit"></div>
     <KitView />
     <QuestionsView />
-    <FooterView />
+    <FooterView @footerScroll="(i) => scroll(i)" />
 </div>
 </template>
 <script>
@@ -23,6 +28,14 @@ export default{
     components:{
         Icon,
     },
+    methods:{
+        scroll(page){
+            this.$refs[`${page}`].scrollIntoView({ behavior: "smooth" });
+        }
+    },
+    mounted(){
+        this.$refs['start'].scrollIntoView({behavior: 'smooth'});
+    }
     // mounted() {
     //     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     //     m[i].l=1*new Date();

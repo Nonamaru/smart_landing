@@ -8,10 +8,10 @@
                 <a href='tel:88005510632'>8 (343) 389 34 57</a>
             </div>
             <div class="anchors-block">
-                <a href="#Opportunities">Возможности</a>
-                <a href="#Devices">Устройства</a>
-                <a href="#Scenarios">Сценарии</a>
-                <a href="#Choosing_a_kit">Выбор комплекта</a>
+                <a @click="this.$emit('footerScroll', 'opportunities')" >Возможности</a>
+                <a @click="this.$emit('footerScroll', 'devices')" >Устройства</a>
+                <a @click="this.$emit('footerScroll', 'slider')" >Сценарии</a>
+                <a @click="this.$emit('footerScroll', 'kit')" >Выбор комплекта</a>
             </div>
             <div class="links-block">
                 <a href="https://ok.ru/group/70000000811708"><Icon icon="mdi:odnoklassniki" /></a>
@@ -34,10 +34,10 @@
             <div class="logo-blocki"><img src="@/assets/WhiteLogo.svg"></div>
             <a href="tel:88005510632">8 (343) 389 34 57</a>
             <div class="anchors-block">
-                <a href="#item_0">Возможности</a>
-                <a href="#item_1">Устройства</a>
-                <a href="#item_2">Сценарии</a>
-                <a href="#item_3">Выбор комплекта</a>
+                <a @click="this.$emit('footerScroll', 'opportunities')">Возможности</a>
+                <a @click="this.$emit('footerScroll', 'devices')">Устройства</a>
+                <a @click="this.$emit('footerScroll', 'slider')">Сценарии</a>
+                <a @click="this.$emit('footerScroll', 'kit')">Выбор комплекта</a>
             </div>
             <div class="links-block">
                 <a href="https://ok.ru/group/70000000811708"><Icon icon="mdi:odnoklassniki" /></a>
@@ -204,6 +204,7 @@ export default{
     font-style: normal;
     font-weight: 400;
     font-size: 0.97vw;
+    cursor: pointer;
 }
 .anchors-block a:hover{color: #F9E9EF;}
 .links-block{

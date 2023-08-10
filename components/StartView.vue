@@ -5,10 +5,14 @@
         <div class="insert-header">
             <a href="https://k-telecom.org/"><img class="logo" src="@/assets/Logo.png" alt="k-telecom.org" /></a>
             <div class="anchors">
-                <a href="#Opportunities">Возможности</a>
-                <a href="#Devices">Устройства</a>
-                <a href="#Scenarios">Сценарии</a>
-                <a href="#Choosing_a_kit">Выбор комплекта</a>
+                <!-- <a href="#Opportunities">Возможности</a> -->
+                <!-- <a href="#Devices">Устройства</a> -->
+                <!-- <a href="#Scenarios">Сценарии</a> -->
+                <!-- <a href="#Choosing_a_kit">Выбор комплекта</a> -->
+                <a @click="this.$emit('scroll', 'opportunities')" >Возможности</a>
+                <a @click="this.$emit('scroll', 'devices')" >Устройства</a>
+                <a @click="this.$emit('scroll', 'slider')" >Сценарии</a>
+                <a @click="this.$emit('scroll', 'kit')" >Выбор комплекта</a>
             </div>
             <a class="number" href="tel:88005510632">8 (343) 389 34 57</a>
         </div>
@@ -17,7 +21,7 @@
     <div class="content">
         <text class="text1">Дом, который <br /><span>заботится <img src="@/assets/Vector.png" class="line" /></span>о вас</text>
         <text class="text2">Умные устройства работают вместе, упрощают домашние<br />дела и делают дом ярче и интереснее</text>
-        <div class="href-button" @click="$router.push('#Choosing_a_kit')">Подключить</div>
+        <div class="href-button" @click="this.$emit('scroll', 'kit')">Подключить</div>
     </div>
     <div class="footer-gradient"></div>
     <img class="background-img" src="@/assets/startpage.png" />
@@ -40,10 +44,10 @@
     <Transition name="menu">
         <div v-if="mobileMenu" class="menu">
             <div class="anchors">
-                <a href="#op" @click="mobileMenu = !mobileMenu">Возможности</a>
-                <a href="#dev" @click="mobileMenu = !mobileMenu">Устройства</a>
-                <a href="#sl" @click="mobileMenu = !mobileMenu">Сценарии</a>
-                <a href="#kt" @click="mobileMenu = !mobileMenu">Выбор комплекта</a>
+                <a @click="mobileMenu = !mobileMenu; this.$emit('scroll', 'opportunities')">Возможности</a>
+                <a @click="mobileMenu = !mobileMenu; this.$emit('scroll', 'devices')">Устройства</a>
+                <a @click="mobileMenu = !mobileMenu; this.$emit('scroll', 'slider')">Сценарии</a>
+                <a @click="mobileMenu = !mobileMenu; this.$emit('scroll', 'kit')">Выбор комплекта</a>
             </div>
             <dvi class="menu-footer">
                 <a href="tel:88005510632">8 (343) 389 34 57</a>
@@ -58,7 +62,7 @@
     <div class="content">
         <text class="text1">Дом, который <span>заботится <img src="@/assets/Vector.png" class="line" /></span> о вас</text>
         <text class="text2">Умные устройства работают вместе, упрощают домашние дела и делают дом ярче и интереснее</text>
-        <div class="href-button" @click="$router.push('#kt')">Подключить</div>
+        <div class="href-button" @click="this.$emit('scroll', 'kit')">Подключить</div>
     </div>
     <div class="footer-gradient"></div>
     <img class="background-img" src="@/assets/startpage.png" />
@@ -139,7 +143,7 @@ export default{
     align-items: center;
     cursor: pointer;
 }
-.logo img{width: 100%; height: 100%;}
+.logo img{ width: 100%;}
 .pre-header-burger-icon{
     position: relative;
     display: flex;
@@ -403,6 +407,7 @@ export default{
     font-style: normal;
     font-weight: 400;
     font-size: 0.97vw;
+    cursor: pointer;
 }
 .anchors a:hover{
     color: #C51F5F;
