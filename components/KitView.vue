@@ -442,9 +442,13 @@ export default{
         },
         async requestSending() {
             const response = await axios.post("https://smart.k-telecom.org/send/send.php", this.feedbackForm);
-            this.$router.push('#success');
+            // this.$router.push('#success');
+            
             ym(94075822,'reachGoal','sendform');
             ym(94075822,'reachGoal','success');
+            this.$yandexMetrika.reachGoal('sendform')
+            this.$yandexMetrika.reachGoal('success')
+
             this.result = response.data;
             this.feedbackForm.telephone = '';
             this.feedbackForm.name = '';

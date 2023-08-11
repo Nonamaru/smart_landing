@@ -325,7 +325,7 @@ export default{
 }
 .background-img{
     z-index: 1;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(gray-sofa-white-living-room-interior-with-copy-space-3d-rendering.jpg);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
     filter: blur(4px);
     object-fit: cover;
     width: 100%;
@@ -346,7 +346,7 @@ export default{
 }
 #start .background-img{
     z-index: 1;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(gray-sofa-white-living-room-interior-with-copy-space-3d-rendering.jpg);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
     filter: blur(4px);
     object-fit: cover;
     width: 100%;

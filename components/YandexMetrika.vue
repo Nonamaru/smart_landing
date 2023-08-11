@@ -1,9 +1,9 @@
 <template>
+<!-- Yandex.Metrika counter -->
     <div>
-      <!-- Yandex.Metrika counter -->
       <img src="https://mc.yandex.ru/watch/94075822" style="position:absolute; left:-9999px;" alt=""/>
-      <!-- /Yandex.Metrika counter -->
     </div>
+<!-- /Yandex.Metrika counter -->
   </template>
   
   <script>

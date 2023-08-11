@@ -1,5 +1,4 @@
 <template>
-<!-- <noscript><div><img src="https://mc.yandex.ru/watch/94075822" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
 <div>
     <Head>
         <Title>Smart K Telecom</Title>
@@ -7,7 +6,9 @@
     </Head>
 </div>
 <div id="desktop">
-    <YandexMetrika />
+    
+    <!-- <YandexMetrika /> -->
+    
     <div ref="start"></div>
     <StartView @scroll="(i) => scroll(i)" />
     <div ref="opportunities"></div>
